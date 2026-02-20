@@ -17,6 +17,8 @@ If the directory does not exist, clone it first:
 git clone https://github.com/riscv/riscv-unified-db.git ~/.openclaw/workspace/riscv-unified-db
 ```
 
+After cloning or updating, read the UDB `README.md` and update `references/repo-structure.md` with any new paths, directories, or structural changes.
+
 ### Keeping UDB Fresh
 
 After cloning or fetching, record the date in `~/.openclaw/workspace/memory/udb-last-update.txt`.
