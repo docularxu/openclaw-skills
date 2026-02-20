@@ -17,6 +17,16 @@ If the directory does not exist, clone it first:
 git clone https://github.com/riscv/riscv-unified-db.git ~/.openclaw/workspace/riscv-unified-db
 ```
 
+### Keeping UDB Fresh
+
+After cloning or fetching, record the date in `~/.openclaw/workspace/memory/udb-last-update.txt`.
+
+On each skill activation, check the file. If it's older than 7 days (or missing), run:
+```bash
+cd ~/.openclaw/workspace/riscv-unified-db && git fetch origin && git merge --ff-only origin/main
+```
+Then update the timestamp file with today's date.
+
 ### Extensions
 ```
 spec/std/isa/ext/<Name>.yaml
