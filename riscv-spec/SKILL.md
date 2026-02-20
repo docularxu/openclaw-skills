@@ -10,7 +10,12 @@ Never state RISC-V spec claims without verifying against the local UDB or upstre
 
 ## Local Database
 
-Path: `~/`.openclaw/workspace/riscv-unified-db/
+Path: `~/.openclaw/workspace/riscv-unified-db/`
+
+If the directory does not exist, clone it first:
+```bash
+git clone https://github.com/riscv/riscv-unified-db.git ~/.openclaw/workspace/riscv-unified-db
+```
 
 ### Extensions
 ```
