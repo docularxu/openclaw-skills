@@ -18,7 +18,7 @@ Never state RISC-V spec claims without verifying against UDB or upstream spec so
 
 ## Local Database
 
-Path: `~/.openclaw/workspace/riscv-unified-db/`
+Path: `~/repos/riscv-unified-db/`
 
 If the directory does not exist, **ask the user for confirmation before cloning** (~200MB). Do not clone silently.
 
@@ -28,7 +28,7 @@ After cloning or fetching, record the date in `~/.openclaw/workspace/memory/udb-
 
 On each activation, check the file. If older than 7 days (or missing), run:
 ```bash
-cd ~/.openclaw/workspace/riscv-unified-db && git fetch origin && git merge --ff-only origin/main
+cd ~/repos/riscv-unified-db && git fetch origin && git merge --ff-only origin/main
 ```
 Then update the timestamp.
 
