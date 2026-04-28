@@ -16,7 +16,16 @@ import os
 import yaml
 import argparse
 
-UDB_ROOT = os.path.expanduser("~/.openclaw/workspace/riscv-unified-db")
+# Try RISCV_UDB_ROOT env, then common locations
+_candidates = [
+    os.environ.get("RISCV_UDB_ROOT"),
+    os.path.expanduser("~/repos/riscv-unified-db"),
+    os.path.expanduser("~/.openclaw/workspace/riscv-unified-db"),
+]
+UDB_ROOT = next((p for p in _candidates if p and os.path.isdir(p)), None)
+if not UDB_ROOT:
+    print("Error: UDB not found. Set RISCV_UDB_ROOT or clone to ~/repos/riscv-unified-db")
+    sys.exit(1)
 PROFILE_DIR = os.path.join(UDB_ROOT, "cfgs", "profile")
 EXT_DIR = os.path.join(UDB_ROOT, "spec", "std", "isa", "ext")
 

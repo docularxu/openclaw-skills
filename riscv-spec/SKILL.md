@@ -24,7 +24,7 @@ If the directory does not exist, **ask the user for confirmation before cloning*
 
 ### Keeping UDB Fresh
 
-After cloning or fetching, record the date in `~/.openclaw/workspace/memory/udb-last-update.txt`.
+After cloning or fetching, record the date in `<skill_dir>/.last-update` (same directory as this SKILL.md).
 
 On each activation, check the file. If older than 7 days (or missing), run:
 ```bash
@@ -113,7 +113,7 @@ Search: `grep -rl '<term>' spec/std/isa/param/`
 
 Quick profile extension listing:
 ```bash
-python3 ~/.openclaw/skills/riscv-spec/scripts/profile-query.py <Profile> [--mandatory|--optional|--all]
+python3 <skill_dir>/scripts/profile-query.py <Profile> [--mandatory|--optional|--all]
 ```
 
 ## What UDB Does NOT Cover
