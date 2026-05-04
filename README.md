@@ -12,18 +12,26 @@ Generate illustrated English word learning cards for kids, with pronunciation, e
 
 ## Installation
 
-Copy the skill directory into `~/.openclaw/skills/`:
+These skills follow the standard [Agent Skills](https://docs.claude.com/en/docs/claude-code/skills) layout and work with any compatible host (Claude Code, OpenClaw, etc.).
+
+Copy a skill directory into your host's skills folder. For Claude Code:
 
 ```bash
-cp -r riscv-spec ~/.openclaw/skills/
+# User-level (available in all projects)
+cp -r riscv-spec ~/.claude/skills/
+
+# Or project-level
+cp -r riscv-spec /path/to/project/.claude/skills/
 ```
 
-Or clone the whole repo and symlink:
+Or clone and symlink:
 
 ```bash
 git clone https://github.com/docularxu/openclaw-skills.git
-ln -s $(pwd)/openclaw-skills/riscv-spec ~/.openclaw/skills/riscv-spec
+ln -s "$(pwd)/openclaw-skills/riscv-spec" ~/.claude/skills/riscv-spec
 ```
+
+For other hosts (e.g. OpenClaw), substitute the host's skills directory (e.g. `~/.openclaw/skills/`).
 
 ## License
 

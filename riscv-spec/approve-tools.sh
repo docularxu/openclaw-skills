@@ -2,7 +2,7 @@
 # Pre-approve riscv-spec skill's UDB file access for Claude Code.
 # Run this once after installing the skill in a Claude Code project.
 #
-# Usage: cd /path/to/your/project && bash ~/.openclaw/skills/riscv-spec/approve-tools.sh
+# Usage: cd /path/to/your/project && bash /path/to/riscv-spec/approve-tools.sh
 
 UDB_PATH="${UDB_PATH:-$HOME/repos/riscv-unified-db}"
 

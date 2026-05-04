@@ -20,7 +20,6 @@ import argparse
 _candidates = [
     os.environ.get("RISCV_UDB_ROOT"),
     os.path.expanduser("~/repos/riscv-unified-db"),
-    os.path.expanduser("~/.openclaw/workspace/riscv-unified-db"),
 ]
 UDB_ROOT = next((p for p in _candidates if p and os.path.isdir(p)), None)
 if not UDB_ROOT:
