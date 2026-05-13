@@ -10,6 +10,9 @@ Look up RISC-V ISA specification details using the local [riscv-unified-db](http
 ### english-word-card
 Generate illustrated English word learning cards for kids, with pronunciation, example sentences, and Chinese explanations.
 
+### conference-live-notes
+Real-time conference/event note-taking workflow. The user attends an event and sends photos (slides, booth displays), voice notes, and text observations; the agent processes everything into structured documentation with OCR indexing, insight extraction, and comprehensive notes.
+
 ## Installation
 
 These skills follow the standard [Agent Skills](https://docs.claude.com/en/docs/claude-code/skills) layout and work with any compatible host (Claude Code, OpenClaw, etc.).
