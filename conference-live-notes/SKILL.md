@@ -45,8 +45,8 @@ For each photo the user sends:
 3. **Append entry** to `photos/README.md`:
    ```markdown
    ### slide-NN-<slug>.jpg
-   - **内容：** Brief Chinese description of the slide content
-   - **PPT 要点（OCR 识别）：**
+   - **Content:** Brief description of the slide content
+   - **Key points (OCR):**
      - Key point 1
      - Key point 2
      - ...
@@ -59,9 +59,9 @@ When the user sends voice messages or text notes:
 
 1. **Transcribe** voice if needed (use Whisper or read transcription)
 2. **Extract insights** - what caught the user's attention, new concepts, opinions
-3. **Append** to `guodong-insights.md` (or `<user>-insights.md`):
+3. **Append** to `<user>-insights.md`:
    ```markdown
-   ### 演讲 N: <Speaker/Topic>
+   ### Talk N: <Speaker/Topic>
    - Key observations from the user
    - 💡 New concepts worth noting
    - Personal reactions and analysis
@@ -73,7 +73,7 @@ When the user sends voice messages or text notes:
 As photos come in, group them by speaker/session. Update `photos/README.md` section headers:
 
 ```markdown
-## 演讲一：Frank Lin（Andes 董事长）
+## Talk 1: Frank Lin (Andes Chairman)
 
 ### slide-01-xxx.jpg
 ...
@@ -114,7 +114,7 @@ After the event (user signals completion or sends final batch):
 | Booth photo | `booth-NN-<slug>.jpg` | `booth-01-andes-demo.jpg` |
 | Large/clear photo | `slide-NN-<slug>.png` | `slide-29-large.png` |
 | Vendor PPT | `ppt-from-<vendor>/` | `ppt-from-osyx/` |
-| User insights | `guodong-insights.md` | (or `<name>-insights.md`) |
+| User insights | `<name>-insights.md` | `guodong-insights.md` |
 | Structured notes | `notes.md` | Industry notes, white-paper material |
 | Photo index | `photos/README.md` | Full OCR index of all photos |
 
@@ -125,4 +125,4 @@ After the event (user signals completion or sends final batch):
 - **Preserve user voice** - Insights file captures the user's own observations, not AI summaries
 - **Structured output** - notes.md is clean enough to reuse for whitepapers/reports
 - **Sequential numbering** - Never reorder; sequence = timeline of the event
-- **Chinese + English** - Descriptions in Chinese, technical terms keep English original
+- **Bilingual ready** - Technical terms keep original language; descriptions adapt to user's language
